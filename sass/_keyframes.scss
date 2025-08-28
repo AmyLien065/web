@@ -1,3 +1,14 @@
+// keyframes
+@keyframes show{
+    from {opacity: 0;}
+    to   {opacity: 1;}
+}
+
+@keyframes hide{
+    from {opacity: 1; display: flex;} //慢慢顯示的動畫
+    to   {opacity: 0; display: none;} //慢慢關掉的動畫
+}
+
 @keyframes myrotate{
     0% {
         transform: rotate(0deg);
@@ -33,3 +44,5 @@
         transform: translated(0, 0, 0);
     }
 }
+
+// keyframes end

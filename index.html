@@ -21,27 +21,41 @@
     <header id="topbar">
         <!-- logo區 -->
         <div class="logo">
-            <img src="./images/logo_b.svg" alt="logo">
+            <a href="./index.html">
+                <img src="./images/logo_b.svg" alt="logo">
+            </a>
         </div>
-        <!-- 導覽列 -->
-        <nav class="navigation">
-            <!-- icon選單 咒語：ul>li*3>a -->
-            <ul class="icon">
-                <li><a class="icon-fb" href="#"></a></li>
-                <li><a class="icon-ig" href="#"></a></li>
-                <li><a class="icon-line" href="#"></a></li>
-            </ul>
 
-            <!-- 主選單 咒語：ul>li*6>a -->
-            <ul class="menu"> <!-- shift+option+a 只註解後面：） ul>li*6>a 指令就會自己輸入6次，相當方便省時 -->
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="#news">NEWS</a></li> <!-- 若超連結暫時不確定導去哪，則先輸入#以免忘記 -->
-                <li><a href="#service">SERVICE</a></li>
-                <li><a href="#video">VIDEO</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="./contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
+        <div class="navbar">
+            <!-- 漢堡按鈕 -->
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- 導覽列 -->
+            <nav class="navigation">
+                <!-- icon選單 咒語：ul>li*3>a -->
+                <ul class="icon">
+                    <li><a class="icon-fb" href="#"></a></li>
+                    <li><a class="icon-ig" href="#"></a></li>
+                    <li><a class="icon-line" href="#"></a></li>
+                </ul>
+
+                <!-- 主選單 咒語：ul>li*6>a -->
+                <ul class="menu"> <!-- shift+option+a 只註解後面：） ul>li*6>a 指令就會自己輸入6次，相當方便省時 -->
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="#news">NEWS</a></li> <!-- 若超連結暫時不確定導去哪，則先輸入#以免忘記 -->
+                    <li><a href="#service">SERVICE</a></li>
+                    <li><a href="#video">VIDEO</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
     </header>
     <!-- 咒語長這樣：main>section*5 -->
     <main id="index">
@@ -129,7 +143,7 @@
             <!-- 列表區塊 -->
             <div class="list-box">
                 <!-- 直接把整區標籤都長出來，咒語：article.item*3>a>figure+div.text-box>h2+p -->
-                <article class="item">
+                <article class="item smoove" data-move-x="-500px" data-rotate="90deg">
                     <a href="#">
                         <figure><img src="./images/pt_news1.jpg" alt=""></figure>
                         <div class="text-box">
@@ -143,7 +157,7 @@
                         </div>
                     </a>
                 </article>
-                <article class="item">
+                <article class="item smoove" data-move-x="-250px" data-rotate="45deg" data-move-y="150px">
                     <a href="#">
                         <figure><img src="./images/pt_news2.jpg" alt=""></figure>
                         <div class="text-box">
@@ -154,7 +168,7 @@
                         </div>
                     </a>
                 </article>
-                <article class="item">
+                <article class="item smoove" data-move-x="500px" data-rotate="-90deg">
                     <a href="#">
                         <figure><img src="./images/pt_news3.jpg" alt=""></figure>
                         <div class="text-box">
@@ -166,18 +180,18 @@
                     </a>
                 </article>
             </div>
-            <a class="more" href="#">More</a>
+            <a class="more smoove" href="#">More</a>
         </section>
         <section id="service">
             <!-- 區塊標題 -->
-            <header class="title">
+            <header class="title smoove">
                 <h2>SERVICE</h2>
                 <h3>服務項目</h3>
             </header>
             <!-- Emmet縮寫：(小括號)定義階層、[中括號]設定屬性＆值、{大括號}設定內容 -->
             <!-- 咒語：ul.list-box>li.item*4>a[href="#"]>h2{SERVICE TITLE}+p -->
             <ul class="list-box">
-                <li class="item">
+                <li class="item smoove" data-move-x="-300px" data-move-y="200px">
                     <a href="#">
                         <h2>SERVICE TITLE</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nulla obcaecati sint
@@ -185,7 +199,7 @@
                             voluptatem ullam corrupti fuga animi ad?</p>
                     </a>
                 </li>
-                <li class="item">
+                <li class="item smoove" data-move-x="-150px" data-move-y="200px">
                     <a href="#">
                         <h2>SERVICE TITLE</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nulla obcaecati sint
@@ -193,7 +207,7 @@
                             voluptatem ullam corrupti fuga animi ad?</p>
                     </a>
                 </li>
-                <li class="item">
+                <li class="item smoove" data-move-x="150px" data-move-y="200px">
                     <a href="#">
                         <h2>SERVICE TITLE</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nulla obcaecati sint
@@ -201,7 +215,7 @@
                             voluptatem ullam corrupti fuga animi ad?</p>
                     </a>
                 </li>
-                <li class="item">
+                <li class="item smoove" data-move-x="300px" data-move-y="200px">
                     <a href="#">
                         <h2>SERVICE TITLE</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nulla obcaecati sint
@@ -211,23 +225,23 @@
                 </li>
             </ul>
 
-            <a class="more" href="#">More</a>
+            <a class="more smoove" data-move-y="50px" href="#">More</a>
 
         </section>
         <section id="video">
             <!-- 區塊標題 -->
-            <header class="title">
+            <header class="title smoove">
                 <h2>VIDEO</h2>
                 <h3>相關影片</h3>
             </header>
-            <div>
+            <!-- 翻轉載入 -->
+            <div class="smoove" data-move-x="-150%" data-rotate-y="-90deg">
                 <video src="./images/Planter.mp4" poster="./images/cover.jpg" controls preload="metadata"></video>
             </div>
         </section>
         <section id="about">
-
-
-            <div>
+            <!-- 透視載入 -->
+            <div class="smoove" data-rotate-x='90deg' data-move-z="-500px">
                 <!-- 區塊標題 -->
                 <header class="title">
                     <h2>ABOUT</h2>
@@ -314,9 +328,8 @@
                     distinctio?</p>
             </div>
 
-
             <!-- 背景影片 -->
-            <video src="./images/flower.mp4" autoplay muted loop playsinline></video>
+            <video class="smoove" src="./images/flower.mp4" autoplay muted loop playsinline></video>
         </section>
     </main>
 
@@ -374,6 +387,10 @@
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- jQuery smoove CDN，https:要記自己加上去，不然連不到 -->
+    <!-- 詳情請洽：https://smoove.js.org/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
 
     <!-- carousel JS別人的套件，常會獨立檔案連結 -->
     <script src="./js/carousel.js"></script>

@@ -15,27 +15,41 @@
     <header id="topbar">
         <!-- logo區 -->
         <div class="logo">
-            <img src="./images/logo_b.svg" alt="logo">
+            <a href="./index.html">
+                <img src="./images/logo_b.svg" alt="logo">
+            </a>
         </div>
-        <!-- 導覽列 -->
-        <nav class="navigation">
-            <!-- icon選單 咒語：ul>li*3>a -->
-            <ul class="icon">
-                <li><a class="icon-fb" href="#"></a></li>
-                <li><a class="icon-ig" href="#"></a></li>
-                <li><a class="icon-line" href="#"></a></li>
-            </ul>
 
-            <!-- 主選單 咒語：ul>li*6>a -->
-            <ul class="menu"> <!-- shift+option+a 只註解後面：） ul>li*6>a 指令就會自己輸入6次，相當方便省時 -->
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="./index.html#news">NEWS</a></li> <!-- 若超連結暫時不確定導去哪，則先輸入#以免忘記 -->
-                <li><a href="./index.html#service">SERVICE</a></li>
-                <li><a href="./index.html#about">ABOUT</a></li>
-                <li><a href="./index.html#video">VIDEO</a></li>
-                <li><a href="./contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
+        <div class="navbar">
+            <!-- 漢堡按鈕 -->
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- 導覽列 -->
+            <nav class="navigation">
+                <!-- icon選單 咒語：ul>li*3>a -->
+                <ul class="icon">
+                    <li><a class="icon-fb" href="#"></a></li>
+                    <li><a class="icon-ig" href="#"></a></li>
+                    <li><a class="icon-line" href="#"></a></li>
+                </ul>
+
+                <!-- 主選單 咒語：ul>li*6>a -->
+                <ul class="menu"> <!-- shift+option+a 只註解後面：） ul>li*6>a 指令就會自己輸入6次，相當方便省時 -->
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="#news">NEWS</a></li> <!-- 若超連結暫時不確定導去哪，則先輸入#以免忘記 -->
+                    <li><a href="#service">SERVICE</a></li>
+                    <li><a href="#video">VIDEO</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
     </header>
     <!-- 主要內容區 -->
     <main>
@@ -73,15 +87,17 @@
                 <form name="contactform" id="contactform" action="" method="post" accept-charset="UTF-8">
 
                     <label for="username">*姓名：</label>
-                    <input type="text" name="username" id="username" title="姓名欄位" placeholder="請輸入您的姓名" required autofocus>
-                    
+                    <input type="text" name="username" id="username" title="姓名欄位" placeholder="請輸入您的姓名" required
+                        autofocus>
+
                     <label for="tel">聯絡電話：</label>
                     <input type="tel" name="tel" id="tel" maxlength="10" title="電話號碼欄位" placeholder="例如：0987654321">
-                    
+
                     <label for="email">Email：</label>
                     <!-- multiple 可輸入多個值用「,」隔開 -->
-                    <input type="email" name="email" id="email" required multiple title="Email欄位" placeholder="請輸入Emal" required>
-                    
+                    <input type="email" name="email" id="email" required multiple title="Email欄位" placeholder="請輸入Emal"
+                        required>
+
                     <label for="message">留言：</label>
                     <textarea name="message" id="message" rows="7" placeholder="請輸入您的意見"></textarea>
                     <button class="btnAnimate" type="submit">
@@ -127,6 +143,13 @@
         <small>Copyright &copy; 愛咪花室 Amy Flower.</small>
     </footer>
 
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <!-- My jQuery 一定要在最下面，最後執行 -->
+    <script src="./js/script.js"></script>
 
 </body>
 

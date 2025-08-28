@@ -114,25 +114,100 @@
     @extend %flex-between;
     padding: $space-xs $space-xl;
 
-    ul {
-        @extend %flex-end;
-    }
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
 
-    .menu {
-        padding: $space-x-xs;
-        border-radius: $radius-ex ;
-        @include glassmorphism;
+        // 漢堡按鈕
+        .hamburger {
+            background-color: transparent;
+            border: none;
+            margin-bottom: $space-xs;
 
-        a {
-            font-family: $family-en;
-            font-weight: $f-w-b;
-            margin: $space-xs;
-            @include border-b($width: 2px, $color: transparent);
+            @media($mediaXl){
+                display: none;
+            }
 
-            &:hover {
-                color: $Black;
-                @include border-b($width: 2px, $color: $Black);
+            .bar {
+                display: block;
+                width: 24px;
+                height: 3px;
+                background-color: $Charcoal ;
+                margin: $space-xxs auto;
+            }
 
+            //把漢堡按鈕 三 變成 X
+            &.is-active {
+                .bar {
+                    &:nth-child(1) {
+                        transform: //旋轉跳躍我閉著眼：）））
+                            rotate(45deg) //旋轉45度
+                            translate(5px, 6px); //位移到指定位置
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0; //漢堡按鈕的第二條槓槓直接隱藏
+                    }
+
+                    &:nth-child(3) {
+                        transform:
+                            rotate(-45deg) //旋轉135度
+                            translate(5px, -6px); //位移到指定位置
+                    }
+                }
+            }
+        }
+
+
+        .navigation {
+
+            @media ($mediaLg) {
+                //0-970寸 平板
+                @include glassmorphism;
+                border-radius: $radius-md;
+                flex-direction: column;
+                padding: $space-sm;
+
+                display: none; //漢堡按鈕一開始隱藏
+                @include amt($name:hide);
+
+                &.show{
+                    display: flex; //按下漢堡按鈕後才顯示
+                    @include amt($name:show);
+                }
+            }
+
+            ul {
+                @extend %flex-end;
+            }
+
+            .menu {
+                padding: $space-x-xs;
+                border-radius: $radius-ex;
+
+                @media ($mediaXl) {
+                    //971寸以上
+                    @include glassmorphism;
+                }
+
+                @media($mediaLg) {
+                    flex-direction: column;
+                    order: -1;
+                }
+
+                a {
+                    font-family: $family-en;
+                    font-weight: $f-w-b;
+                    margin: $space-xs;
+                    @include border-b($width: 2px, $color: transparent);
+
+                    &:hover {
+                        color: $Black;
+                        @include border-b($width: 2px, $color: $Black);
+
+                    }
+                }
             }
         }
     }
@@ -618,7 +693,7 @@ footer {
         cursor: pointer;
         z-index: $z-ex;
 
-        &:hover{
+        &:hover {
             background-color: $lesser-2;
         }
     }
